@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style>
+        h3 {
+            text-align: center;
+            color: #2f3238;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Muertes por pais</h1>
+
+    <form action="/grafico2" method="post">
+        <div class="text">
+            <h3>Ingresa un país:</h3>
+            <input type="text" name="country"><br><br>
+        </div>
+        <div class="date-section"> 
+            <h3>Desde:</h3><input type="date" name="start_date" value="2022-10-01"><br><br>
+            <h3>Hasta:</h3><input type="date" name="end_date" value="2022-10-30"><br><br>
+        </div>
+        <input type="submit" value="Generar Gráfico">
+        <p onclick="window.location.href='/'" class="volver-option">Click aquí para volver al inicio</p>
+    </form>
+
+    {% if graph_url %}
+        <img src="data:image/png;base64,{{ graph_url }}" alt="Gráfico de Casos de COVID">
+    {% endif %}
+</div>
+
+</body>
+</html>

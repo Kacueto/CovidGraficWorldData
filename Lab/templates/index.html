@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Gráficos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style>
+        h1 {
+            text-align: center;
+            color: #2f3238;
+            margin-bottom: 50px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <p class="small-text">ÁNALISIS COVID-19: DE DATOS A GRÁFICOS</p>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-logo">
+                    <img src="{{ url_for('static', filename='images/one.png') }}">
+                </div>
+                <h2>Casos de COVID por continente</h2>
+                <p class="card-description">Presenta la cantidad de casos de COVID-19 en diferentes continentes, que puedes seleccionar mediante casillas de verificación. Además, puedes especificar una fecha particular para visualizar los datos correspondientes a ese día.</p>
+                <button onclick="window.location.href='/grafico1'" class="card-button">Ver Gráfico</button>
+            </div>
+            <div class="card">
+                <div class="card-logo">
+                    <img src="{{ url_for('static', filename='images/two.png') }}">
+                </div>
+                <h2>Muertes por COVID en rango de fechas</h2>
+                <p class="card-description">Muestra la evolución en el número de muertes por COVID-19 en un rango de tiempo que puedes especificar. Selecciona dos fechas y visualiza cómo ha cambiado el número de fallecimientos entre esos periodos.</p>
+                <button onclick="window.location.href='/grafico2'" class="card-button">Ver Gráfico</button>
+            </div>
+            <div class="card">
+                <div class="card-logo">
+                    <img src="{{ url_for('static', filename='images/three.png') }}">
+                </div>
+                <h2>Poblacion vacunada y no vacunada</h2>
+                <p class="card-description">Puedes explorar la proporción de personas vacunadas y no vacunadas contra el COVID-19 en un continente específico. Selecciona el continente de tu interés desde el menú desplegable y observa la distribución de vacunación en él.</p>
+                <button onclick="window.location.href='/grafico3'" class="card-button">Ver Gráfico</button>
+            </div>
+            <div class="card">
+                <div class="card-logo">
+                    <img src="{{ url_for('static', filename='images/four.png') }}">
+                </div>
+                <h2>Cama por 1000 habitantes y esperanza de vida</h2>
+                <p class="card-description">Compara la cantidad de camas hospitalarias disponibles por cada 1000 habitantes con la esperanza de vida de diferentes países o regiones. Este análisis puede ofrecer una perspectiva sobre la relación entre la infraestructura de salud y la longevidad de la población.</p>
+                <button onclick="window.location.href='/grafico4'" class="card-button">Ver Gráfico</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

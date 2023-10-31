@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico 4</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Camas de hospital vs expectativa de vida</h1>
+    {% if graph_url %}
+    <img src="data:image/png;base64,{{ graph_url }}" alt="Heatmap">
+    {% endif %}
+    <p onclick="window.location.href='/'" class="volver-option">Click aquí para volver al inicio</p>
+</div>
+</body>
+</html>

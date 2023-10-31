@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cecece;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+
+.continent-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.date-section {
+    margin-top: 5px;
+}
+
+.date-section label,
+.date-section input[type="date"] {
+    margin: 0 auto;
+    display: block;
+    background-color: #2f3238;
+    padding: 10px;
+    position: center;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #2f3238;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #2f3238;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2f3238;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-logo img {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-description {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.card-button {
+    background-color: #2f3238;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;  
+    height: 40px;  
+}
+
+.small-text {
+    font-size: 50px;
+    font-weight: bold;
+    color:#2f3238 
+}
+
+.volver-option {
+    text-align: center;
+    color: #2f3238;
+    cursor: pointer;
+}
+
+input[type=text] {
+    border: none;
+    outline: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-bottom: 0.2em solid #2f3238;
+    background: rgb(75, 80, 87);
+    border-radius: 0.2em 0.2em 0 0;
+    padding: 0.4em;
+    color: #ffffff;
+    text-align: center;
+}
+
+select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2f3238;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+select option {
+    border-radius: 5px;
+    padding: 30px;
+    background-color: #2f3238;
+    color: #ffffff;
+}
+
+select option:hover {
+    background-color: #414549;
+}

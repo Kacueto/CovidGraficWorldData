@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico 3</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Población vacunada y no vacunada</h1>
+    <form action="/grafico3" method="post">
+        <label for="continent">Selecciona un continente:</label>
+        <select name="continent" id="continent">
+            <option value="Africa">África</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europa</option>
+            <option value="North America">América del Norte</option>
+            <option value="South America">América del Sur</option>  
+            <option value="Oceania">Oceanía</option>
+        </select>
+        <input type="submit" value="Generar gráfico">
+        <p onclick="window.location.href='/'" class="volver-option">Click aquí para volver al inicio</p>
+    </form>
+    {% if graph_url %}
+        <img src="data:image/png;base64,{{ graph_url }}" alt="Gráfico de Casos de COVID">
+    {% endif %}
+    {% if continent_name %}
+        <h2>Continente: {{ continent_name }}</h2>
+        <h3>Población Total: {{ total_population }}</h3>
+    {% endif %}
+</div>
+</body>
+</html>

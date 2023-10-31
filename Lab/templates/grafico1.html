@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Casos de COVID por Continente</h1>
+
+    <form action="/grafico1" method="post">
+        <h3>Continentes:</h3>
+        <div class="continent-section">
+            <label>
+                <input type="checkbox" name="locations" value="Asia"> Asia
+            </label>
+            <label>
+                <input type="checkbox" name="locations" value="Africa"> África
+            </label>
+            <label>
+                <input type="checkbox" name="locations" value="North America"> Norteamérica
+            </label>
+            <label>
+                <input type="checkbox" name="locations" value="South America"> Sudamérica
+            </label>
+            <label>
+                <input type="checkbox" name="locations" value="Europe"> Europa
+            </label>
+            <label>
+                <input type="checkbox" name="locations" value="Oceania"> Oceanía
+            </label>
+        </div>
+
+        <div class="date-section">
+            <h3>Fecha:</h3>
+            <input type="date" name="date" value="2022-10-30"><br><br>
+        </div>
+
+        <input type="submit" value="Generar Gráfico">
+        <p onclick="window.location.href='/'" class="volver-option">Click aquí para volver al inicio</p>
+    </form>
+
+    {% if graph_url %}
+        <img src="data:image/png;base64,{{ graph_url }}" alt="Gráfico de Casos de COVID">
+    {% endif %}
+</div>
+
+</body>
+</html>
